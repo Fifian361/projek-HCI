@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login — Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #f28c28;
+      --maroon: #6b1a2e;
+      --cream: #fff8e1;
+      --cream2: #fdefc3;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      background: #f3f4f6;
+    }
+
+    .bg {
+      position: fixed; inset: 0; z-index: 0;
+      background: #f3f4f6;
+    }
+
+    /* ── ORANGE TOP BAND ── */
+    .top-band {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: 90px;
+      background: var(--orange);
+      z-index: 1;
+    }
+
+    /* Scallop bottom of orange band */
+    .top-band::after {
+      content: '';
+      position: absolute;
+      bottom: -22px; left: -10px; right: -10px;
+      height: 44px;
+      background:
+        radial-gradient(circle at 50% 0%, var(--orange) 22px, transparent 22px);
+      background-size: 44px 44px;
+      background-repeat: repeat-x;
+    }
+
+    /* ── CARD ── */
+    .card-wrap {
+      position: relative; z-index: 10;
+      margin-top: 30px;
+      animation: rise 0.6s cubic-bezier(0.34,1.56,0.64,1) both;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(30px) scale(0.96); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .card {
+      width: 340px;
+      background: var(--cream);
+      border-radius: 8px;
+      overflow: visible;
+      position: relative;
+      border: 2.5px solid var(--orange);
+      box-shadow: 0 8px 32px rgba(242,140,40,0.15);
+    }
+
+
+
+    .card-inner {
+      padding: 36px 36px 32px;
+    }
+
+    .card-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--maroon);
+      text-align: center;
+      margin-bottom: 28px;
+      letter-spacing: -0.5px;
+    }
+
+    .field {
+      margin-bottom: 16px;
+    }
+
+    .field label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #555;
+      margin-bottom: 6px;
+    }
+
+    .field input {
+      width: 100%;
+      padding: 9px 12px;
+      border: 1.5px solid #ddd;
+      border-radius: 6px;
+      font-size: 14px;
+      font-family: inherit;
+      background: white;
+      color: #1a1a2e;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .field input:focus {
+      border-color: var(--orange);
+      box-shadow: 0 0 0 3px rgba(242,140,40,0.15);
+    }
+
+    .btn-login {
+      width: 100%;
+      margin-top: 22px;
+      padding: 11px;
+      background: var(--maroon);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
+      letter-spacing: 0.3px;
+      transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
+      box-shadow: 0 3px 10px rgba(107,26,46,0.3);
+    }
+
+    .btn-login:hover {
+      background: #561527;
+      transform: translateY(-1px);
+      box-shadow: 0 5px 16px rgba(107,26,46,0.4);
+    }
+
+    .btn-login:active { transform: translateY(0); }
+
+    .card-footer {
+      text-align: center;
+      margin-top: 14px;
+      font-size: 12px;
+      color: #999;
+    }
+
+    .card-footer a { color: var(--orange); text-decoration: none; font-weight: 600; }
+    .card-footer a:hover { text-decoration: underline; }
+
+    /* ── LOGO in top band ── */
+    .top-logo {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: 90px;
+      display: flex; align-items: center; justify-content: center;
+      z-index: 2; pointer-events: none;
+    }
+
+    .top-logo span {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 700;
+      color: white;
+      letter-spacing: -0.3px;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    }
+
+    /* Error shake */
+    @keyframes shake {
+      0%,100% { transform: translateX(0); }
+      20%,60% { transform: translateX(-6px); }
+      40%,80% { transform: translateX(6px); }
+    }
+
+    .shake { animation: shake 0.4s ease; }
+  </style>
+</head>
+<body>
+
+  <div class="bg"></div>
+
+  <div class="top-band"></div>
+  <div class="top-logo"><span>Admin</span></div>
+
+  <div class="card-wrap">
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-title">Login</div>
+
+        <div class="field">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Enter your username" autocomplete="username"/>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" autocomplete="current-password"/>
+        </div>
+
+        <button class="btn-login" onclick="handleLogin()">Login</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Allow Enter key to submit
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') handleLogin();
+    });
+
+    function handleLogin() {
+      var u = document.getElementById('username').value.trim();
+      var p = document.getElementById('password').value.trim();
+      if (!u || !p) {
+        var card = document.querySelector('.card-wrap');
+        card.classList.remove('shake');
+        void card.offsetWidth;
+        card.classList.add('shake');
+        return;
+      }
+      window.location.href = 'gallery.html';
+    }
+  </script>
+
+</body>
+</html>
