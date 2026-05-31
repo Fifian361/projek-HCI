@@ -1,0 +1,584 @@
+@font-face {
+    font-family: 'Aileron';
+    src: url(aileron/Aileron-Regular.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Aileron", sans-serif;
+}
+
+body {
+    background: #FFF8F8;
+    color: #FF8827;
+}
+
+.page-wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main{
+    flex: 1;
+}
+
+#main-header{
+    position: sticky;
+    top: 0;
+    background: #FF8827;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-family: "Aileron", sans-serif;
+    z-index: 10;
+}
+
+#main-header a{
+    text-decoration: none;
+    color: rgb(68, 47, 18);
+    margin-left: 15px;
+    transition: color 0.2s;
+}
+
+#main-header a:hover{
+    color: #ffffff;
+}
+
+.title a{
+    color: rgb(68, 47, 18);
+    font-family: "Aileron", sans-serif;
+}
+
+.lang{
+    display: inline-block;
+    background: #FF8827;;
+    padding: 6px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    transition: color 0.2s;
+}
+
+.lang:hover{
+    transform: scale(1.02);
+    background: #9a3412;
+}
+
+.intro {
+    background: #FF8827;
+    padding: 40px 80px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.intro-img{
+    max-height: 400px;
+    width: auto;
+    display: block;
+}
+
+.intro .content{
+    text-align: right;
+    max-width: 50%;
+}
+
+.intro h2{
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family: "Aileron", sans-serif;
+    margin-bottom: 20px;
+}
+
+.intro p{
+    font-family: "Aileron", sans-serif;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.btn{
+    display: inline-block;
+    background: #521f1b;
+    padding: 12px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    transition: color 0.2s;
+}
+
+.btn:hover{
+    transform: scale(1.02);
+    background: #9a3412;
+}
+
+.wave-divider {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: #fef9f0;
+    
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100' preserveAspectRatio='none'%3E%3Cpath d='M0,0 C240,130 480,130 720,0 C960,130 1200,130 1440,0 L1440,0 L0,0 Z' fill='%23FF8827'/%3E%3C/svg%3E");
+    background-size: 360px 40px; 
+    background-repeat: repeat-x;
+    margin-top: -30px;
+    overflow: visible;
+}
+
+.wave-trinket {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    overflow: visible;
+}
+
+.apple-one {
+    width: 200px;       
+    height: auto;
+    top: -120px;        
+    left: 6%;
+    transform: rotate(10deg);
+}
+
+.apple-two {
+    width: 120px;
+    height: auto;
+    top: -50px;     
+    left: 20%;
+    transform: rotate(45deg);
+}
+
+.productOverview{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 60px;
+    background-color: #fef9f0;
+    padding-top: 30px;
+}
+
+.product-content{
+    flex: 1;
+    max-width: 40%;
+    text-align: center;
+}
+
+.product-content h2{
+    font-size: 45px;
+    letter-spacing: 4px;
+    color: #521f1b;
+    font-family: "Aileron", sans-serif;
+    margin-bottom: 20px;
+}
+
+.btn-prod{
+    display: inline-block;
+    background: #521f1b;
+    padding: 12px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    transition: color 0.2s;
+}
+
+.btn-prod:hover{
+    transform: scale(1.02);
+    background: #9a3412;
+}
+
+.product-content .content{
+    text-align: left;
+    max-width: 50%;
+}
+
+.products{
+    flex: 1;
+    position: relative;
+    width: 450px;
+    height: 450px;
+}
+
+.product-pics{
+    position: absolute;
+    display: block;
+    height: auto;
+    filter: drop-shadow(4px 4px 0px rgba(223, 111, 0, 0.2));
+}
+
+.pic-one{
+    width: 240px;
+    height: auto;
+    top: -20px;
+    left: 260px;
+    z-index: 2;
+}
+
+.pic-two{
+    width: 300px;
+    height: auto;
+    top: 5px;
+    right: 20px;
+    z-index: 1;
+    transform: rotate(15deg);
+}
+
+.pic-three{
+    width: 220px;
+    height: auto;
+    top: 120px;
+    bottom: 80px;
+    left: 100px;
+    z-index: 3;
+    transform: rotate(-25deg);
+}
+
+.pic-four{
+    width: 270px;
+    height: auto;
+    top: 180px;
+    bottom: 0px;
+    right: 170px;
+    z-index: 4;
+    transform: rotate(5deg);
+}
+
+footer {
+    background-color: #FF8827;
+    width: 100%;
+    padding: 0px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 10px 0;
+}
+
+.logo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 60px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.logo-icon:hover {
+    transform: scale(1.08);
+}
+
+.logo-icon img{
+    width: 70px;
+    height: auto;
+}
+
+span{
+    color: #ffffff;
+    font-family: "Aileron", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+
+.event-section {
+    position: relative;
+    width: 100%;
+    min-height: 700px;
+    padding: 180px 40px 80px 40px; 
+    background-image: url('img/picnic.png');
+    background-position: top center;
+    background-size: 100% auto; 
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.badges-wrapper {
+    position: absolute;
+    top: 140px;
+    left: 425px;
+    z-index: 9;
+}
+
+.badge {
+    background-color: #24a148; 
+    color: #0b2265;            
+    font-weight: 900;
+    font-size: 18px;
+    padding: 20px 34px;
+    border-radius: 50px;
+    width: fit-content;
+    box-shadow: 2px 3px 6px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.badge-prev {
+    transform: rotate(10deg) translate(15px, 5px);
+}
+
+.badge-collab {
+    transform: rotate(-8deg);
+}
+
+.card-box {
+    position: relative;
+    width: 100%;
+    max-width: 850px; 
+    background: #fff9e6; 
+    border: 8px solid #ffb700;
+    border-radius: 50px; 
+    padding: 55px 35px 45px 35px;
+    box-shadow: 0px 10px 0px #e69d00;
+    z-index: 5;
+}
+
+.sticker-apple {
+    position: absolute;
+    top: -200px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: auto;
+    z-index: 20; 
+}
+
+.card-inner-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.photo-column {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.workshop-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.text-column {
+    color: #4a121a; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.event-description {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+.event-meta {
+    font-size: 1.35rem;
+    line-height: 1.6;
+}
+
+.event-time {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.btn-more {
+    align-self: flex-start;
+    background-color: #4a121a;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    box-shadow: 0 4px 0px #2a050a;
+    transition: all 0.15s ease-in-out;
+}
+
+.btn-more:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0px #2a050a;
+    background: #9a3412;
+}
+
+/* Sparkles dynamic overlays */
+.sticker-sparkles {
+    position: absolute;
+    bottom: -35px;
+    right: 0px;
+    width: 250px;
+    height: auto;
+    pointer-events: none;
+    z-index: 25;
+}
+
+@media screen and (max-width: 1024px) {
+    .intro {
+        padding: 40px 40px 80px 40px;
+        gap: 80px;
+    }
+    .productOverview {
+        padding: 60px 40px;
+        gap: 80px;
+    }
+    .event-section {
+        padding: 140px 30px 60px 30px;
+    }
+    .badges-wrapper {
+        left: 5%;
+        top: -50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #main-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+        padding: 15px;
+    }
+
+    #main-header nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #main-header a {
+        margin-left: 0;
+        margin: 0 5px;
+        font-size: 0.95rem;
+    }
+
+    .intro {
+        padding: 40px 20px 80px 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .intro-img {
+        max-height: 250px;
+        width: auto;
+    }
+
+    .intro .content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .intro h2 {
+        font-size: 28px;
+        letter-spacing: 2px;
+    }
+
+    .productOverview {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+        padding: 60px 20px;
+    }
+
+    .product-content {
+        max-width: 100%;
+    }
+
+    .product-content h2 {
+        font-size: 32px;
+    }
+
+    .products {
+        width: 100%;
+        max-width: 440px;
+        height: 340px;
+    }
+
+    .product-pics {
+        filter: drop-shadow(3px 3px 0px rgba(223, 111, 0, 0.15));
+    }
+    .pic-one { width: 130px; left: 55%; top: -10px; }
+    .pic-two { width: 170px; right: 5%; top: 10px; }
+    .pic-three { width: 120px; left: 5%; top: 110px; }
+    .pic-four { width: 160px; right: 20%; top: 150px; }
+
+    .event-section {
+        padding: 160px 15px 60px 15px;
+    }
+
+    .badges-wrapper {
+        top: -45px;
+        left: 15px;
+    }
+
+    .badge {
+        font-size: 14px;
+        padding: 9px 18px;
+    }
+
+    .badge-prev {
+        transform: rotate(-8deg) translate(10px, 5px);
+    }
+    
+    .badge-collab {
+        transform: rotate(-4deg);
+    }
+
+    .card-box {
+        padding: 45px 20px 30px 20px;
+        border-radius: 30px;
+        border-width: 6px;
+    }
+
+    .sticker-apple {
+        top: -35px;
+        width: 65px;
+    }
+
+    .card-inner-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .text-column {
+        text-align: center;
+        gap: 15px;
+    }
+
+    .btn-more {
+        align-self: center; 
+    }
+
+    .sticker-sparkles {
+        width: 80px;
+        bottom: -25px;
+        right: 15px;
+    }
+
+    footer {
+        padding: 20px 10px;
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
