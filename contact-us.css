@@ -1,0 +1,367 @@
+@font-face {
+    font-family: aileron-font;
+    src: url(aileron/Aileron-Regular.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+body{
+    font-family: aileron-font;
+    /* background-color: #FF8827; */
+}
+
+html, body{
+    overflow-x: clip;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.header-wrapper {
+    position: relative;
+    width: 100%;
+    background-color: #FF8827;
+}
+
+.cool-circle {
+    position: absolute;
+    bottom: -10vw;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.circle {
+    flex-shrink: 0;
+    width: 20vw;
+    height: 15vw;
+    border-radius: 50%;
+    background: #FF8827;
+    margin-left: -2vw;
+    z-index: 1;
+}
+
+.navigation {
+    position: relative;
+    height: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    padding: 0 1rem;
+}
+
+.Logo{
+    font-size: clamp(1.5vw ,1rem+0.5vw, 2.5rem+1vw);;
+    margin: auto 0.5rem;
+    align-items: bottom;
+
+}
+
+.menu ul{
+    margin: 10px;
+    margin-right: -10px;
+    padding: 12px;
+    display: flex;
+    gap: 10px;
+    /* color: #AC510B; */
+}
+
+.menu ul li{
+    list-style: none;
+    padding: 15px 15px;
+    display: block;
+    border-radius: 25px;
+}
+
+.menu ul li a{ 
+font-size: clamp(1.5vw ,1.5vw, 2vw );  
+text-decoration: none;
+color: #671835;
+
+}
+
+.menu ul li a:hover{
+    text-decoration: underline;
+    color: #AC510B;
+}
+
+.hamburger{
+    width: 1.875rem;
+    height: 2rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+}
+
+.hamburger_line{
+    height: 0.234rem;
+    width: 100%;
+    background-color: #671835;
+    border-radius: 1rem;
+    transition: all ease-in-out 0.2s;
+}
+
+.apple{
+    position: absolute;
+    top: 100%;
+    width: 25vw;
+    height: auto;
+    z-index: 5;
+}
+
+main{
+    background-image: url(image-contact-us/picnicgede.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    left: 0;
+    margin-top: 15%;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15% 0;   
+}
+
+
+.content-wrapper {
+    width: 90%;
+    max-width: 1400px;
+
+    background-image: url(image-contact-us/latar-events.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    min-height: 750px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 6rem;
+}
+
+.isi-kontent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+}
+ 
+.kiri {
+    flex: 1;
+    display: flex;
+    margin-top: -15%;
+    margin-left: 15%;
+    flex-direction: column;
+    gap: 2rem;
+}
+ 
+.kiri h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    color: #1400C7;
+    font-weight: 100;
+    margin: 0;
+    line-height: 1.2;
+}
+ 
+.kiri h2 {
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    color: #1400C7;
+    font-weight: 100;
+    margin: 0;
+    line-height: 1.3;
+}
+ 
+.garis-vertikal {
+    width: 3px;
+    height: 500px;
+    background-color: #1400C7;
+    flex-shrink: 0;
+}
+ 
+.kanan {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    min-height: 100px;
+    margin-right: 150px;
+}
+ 
+.kanan img {
+    position: absolute;
+    top: 15%;
+    width: 15%;
+    
+    max-width: 300px;
+    height: auto;
+    object-fit: contain;
+}
+
+.footer{
+    background-color: #FF2992;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    min-height: 44px;
+} 
+
+
+.ig-icon,.tt-icon {
+    font-size: clamp(14px, 3vw, 24px);
+    color: white;
+    background-color: #FF8827;
+    border-radius: 10px;
+    display: flex;
+    padding: clamp(6px, 1vw, 12px);
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-link{
+    font-size: clamp(12px, 3vw, 20px);
+    text-decoration: none;
+    color:white;
+}
+
+@media screen and (max-width:1024px){
+
+    .content-wrapper{
+        min-height: 600px;
+        padding: 3rem 4rem;
+    }
+
+    .isi-kontent{
+        gap: 2rem;
+    }
+
+    .garis-vertikal{
+        height: 320px;
+    }
+
+    .kanan img{
+        width: 180px;
+        top: 100px;
+        right: 100px;
+    }
+
+    .kiri h1{
+        font-size: 3rem;
+    }
+
+    .kiri h2{
+        font-size: 1.5rem;
+    }
+}
+
+
+@media screen and (max-width:768px){
+    .hamburger{
+    display: flex;
+    }
+    .menu{
+        position: absolute;
+        /* top: 1rem; */
+        display: flex;
+        align-items: center;
+        top: -28rem; 
+        width: 100%;
+        transition: all ease-in-out;
+        background-color: #FF8827;
+        
+    }
+    .menu ul li a{
+        color: #671835;
+    }
+
+    .nav{
+        position: relative;
+        flex-direction: column;
+        align-items: flex-start;
+        z-index: 100;
+    }
+
+    .cool-circle.active {
+    position: absolute;
+    top: 650%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+    pointer-events: none;
+    }
+    .menu ul{
+        flex-direction: column;
+        width: 100%;
+        padding: 3rem 0 0.6rem;
+    }
+    .menu ul li{
+        text-align: center;
+        background-color: transparent;
+    }
+    .menu{
+        z-index: -1;
+    }
+    .menu.active{
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+    .hamburger.active :nth-child(1){
+        transform: rotate(45deg) translate(0.75rem, 0.1875rem);
+    }
+    .hamburger.active :nth-child(2){
+       opacity: 0;
+    }
+    .hamburger.active :nth-child(3){
+        transform: rotate(-45deg) translate(0.75rem, -0.1875rem);
+    } 
+
+    main{
+        padding: 25% 0 10%;
+    }
+
+    .kanan{
+        display: none;
+    }
+
+    .content-wrapper{
+        padding: 3rem 2rem;
+    }
+
+    .isi-kontent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;  
+    }
+
+    .kiri{
+    margin-left: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .garis-vertikal{
+        display: none;
+    }
+}

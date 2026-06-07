@@ -1,0 +1,640 @@
+@font-face {
+    font-family: aileron-font;
+    src: url(aileron/Aileron-Regular.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+body{
+    font-family: aileron-font;
+    background-color: #FFF7EE;
+}
+
+html, body{
+    overflow-x: clip;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.header-wrapper {
+    position: relative;
+    width: 100%;
+    background-color: #FF8827;
+}
+
+.cool-circle {
+    position: absolute;
+    bottom: -10vw;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.circle {
+    flex-shrink: 0;
+    width: 20vw;
+    height: 15vw;
+    border-radius: 50%;
+    background: #FF8827;
+    margin-left: -2vw;
+    z-index: 1;
+}
+
+.navigation {
+    position: relative;
+    height: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    padding: 0 1rem;
+}
+
+.Logo{
+    font-size: clamp(1.5vw ,1rem+0.5vw, 2.5rem+1vw);;
+    margin: auto 0.5rem;
+    align-items: bottom;
+
+}
+
+.menu ul{
+    margin: 10px;
+    margin-right: -10px;
+    padding: 12px;
+    display: flex;
+    gap: 10px;
+    /* color: #AC510B; */
+}
+
+.menu ul li{
+    list-style: none;
+    padding: 15px 15px;
+    display: block;
+    border-radius: 25px;
+}
+
+.menu ul li a{ 
+font-size: clamp(1.5vw ,1.5vw, 2vw );  
+text-decoration: none;
+color: #671835;
+
+}
+
+.menu ul li a:hover{
+    text-decoration: underline;
+    color: #AC510B;
+}
+
+.hamburger{
+    width: 1.875rem;
+    height: 2rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+}
+
+.hamburger_line{
+    height: 0.234rem;
+    width: 100%;
+    background-color: #671835;
+    border-radius: 1rem;
+    transition: all ease-in-out 0.2s;
+}
+
+
+
+.apple{
+    position: absolute;
+    top: 100%;
+    width: 25vw;
+    height: auto;
+    z-index: 5;
+}
+
+.content-atas{
+    margin-top: 5%;
+    position: relative;
+    width: 100%;
+    height: 750px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.kiri {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.kiri h1 {
+    color: #671835;
+    font-size: 4rem;
+    font-weight: 100;
+    margin: 0;
+}
+
+.kiri button {
+    color: #FFF7EE;
+    background-color: #671835;
+    border-radius: 12px;
+    font-size: 1.5rem;
+    padding: 20px 27px;
+    cursor: pointer;
+}
+
+/* .kiri button:hover{
+
+} */
+
+.garis {
+    height: 500px;
+    width: 4px;
+    background: black;
+}
+
+.kanan {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.item-ngambang {
+    width: 50vw;
+    max-width: 1500px;
+    height: auto;
+    position: relative;
+    top: 170px;
+    z-index: 9;
+}
+
+.dekor{ 
+    position: absolute;
+    display: none;
+}
+
+.baju {
+    position: relative;
+    background-image: url("baju.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 900px;
+    
+}
+
+.produk-koleksi{
+    position: absolute;
+    top: 8vw;
+    width: 45vw;
+    height: 35vw;
+
+    background-image: url("katalog-produk.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    z-index: 3;
+}
+
+.produk-koleksi h1 {
+    color: #1400C7;
+    font-size: 2VW;
+    font-weight: 100;
+    margin: 0;
+}
+
+.product {
+    position: absolute;
+    left: 22%;
+    top: 30%;
+    transform: rotate(-20deg);
+}
+
+.collec {
+    position: absolute;
+    left: 48%;
+    top: 53%;
+    transform: rotate(20deg);
+}
+
+.product,
+.collec {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+.produk-koleksi{
+    position: absolute;
+    top: 8vw;
+    width: 45vw;
+    height: 35vw;
+    background-image: url("katalog-produk.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 3;
+}
+
+.kantong{
+    background-image: url("kantong.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 40vw;
+    height: 40vw;
+    right: 0;
+    top: 15vw;
+    z-index: 10;
+}
+
+.main-bot {
+    background-color: #4B6CC9;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 0 0 0;
+    margin-top: -8%;
+    overflow: hidden;
+}
+ 
+.celana {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 0;
+}
+ 
+.pinggang {
+    background-image: url("belt.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    height: 9vw;
+    min-height: 60px;
+    margin-bottom: 3rem;
+    flex-shrink: 0;
+}
+ 
+.gallery-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    width: 100%;
+}
+ 
+.container-img {
+    background-color: #0C0076;
+    border-radius: 55px;
+    border: 40px solid #0C0076;
+    padding-right: 50px;
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    
+    width: 80%;
+    max-width: 800px;
+    height: 800px;
+    
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+ 
+.container-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    background-color: #e0e0e0;
+    transition: transform 0.3s ease;
+}
+ 
+.container-img::-webkit-scrollbar {
+    width: 100px;
+}
+ 
+.container-img::-webkit-scrollbar-track {
+    background-color: #FF2992;
+    border-radius: 50vw;
+    margin-block: 1rem;
+}
+ 
+.container-img::-webkit-scrollbar-thumb {
+    width: 100px;
+    border: 10px solid #FF2992;
+    background-color: #621535;
+    border-radius: 100vw;
+    transition: background-color 0.2s ease;
+}
+
+.scrollbar-container {
+    width: 100px;
+    height: 600px;
+    flex-shrink: 0;
+}
+
+.picnic-bg {
+    width: 100%;
+    height: auto;
+    margin-bottom: -1% ;
+    background-color: #4B6CC9;
+}
+
+.footer{
+    background-color: #FF2992;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    min-height: 44px;
+} 
+
+
+.ig-icon,.tt-icon {
+    font-size: clamp(14px, 3vw, 24px);
+    color: white;
+    background-color: #FF8827;
+    border-radius: 10px;
+    display: flex;
+    padding: clamp(6px, 1vw, 12px);
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-link{
+    font-size: clamp(12px, 3vw, 20px);
+    text-decoration: none;
+    color:white;
+}
+
+@media (max-width:1024px){
+    .main-bot{
+        margin-top: -10%;
+    }
+
+    .kantong{
+        top: 18vw;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .hamburger{
+    display: flex;
+    }
+    .menu{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        top: -28rem; 
+        width: 100%;
+        transition: all ease-in-out;
+        background-color: #FF8827;
+        
+    }
+    .menu ul li a{
+        color: #671835;
+    }
+
+    .nav{
+        position: relative;
+        flex-direction: column;
+        align-items: flex-start;
+        z-index: 100;
+    }
+
+    .cool-circle.active {
+    position: absolute;
+    top: 650%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+    pointer-events: none;
+    }
+    .menu ul{
+        flex-direction: column;
+        width: 100%;
+        padding: 3rem 0 0.6rem;
+    }
+    .menu ul li{
+        text-align: center;
+        background-color: transparent;
+    }
+    .menu{
+        z-index: -1;
+    }
+    .menu.active{
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+    .hamburger.active :nth-child(1){
+        transform: rotate(45deg) translate(0.75rem, 0.1875rem);
+    }
+    .hamburger.active :nth-child(2){
+       opacity: 0;
+    }
+    .hamburger.active :nth-child(3){
+        transform: rotate(-45deg) translate(0.75rem, -0.1875rem);
+    }
+    
+    .cool-circle.active {
+        position: absolute;
+        top: 650%;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .content-atas {
+        flex-direction: column;
+        height: auto;
+        margin-top: 20%;
+        gap: 2rem;
+    }
+    
+    .kiri {
+        width: 100%;
+    }
+    
+    .kiri h1 {
+        font-size: 2.5rem;
+    }
+    
+    .garis {
+        display: none;
+    }
+    
+    .kanan {
+        width: 100%;
+    }
+
+    .decors-mobile{
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    .dekor{
+        position: absolute; 
+        display: block;
+        width: 20%;
+        z-index: 7;
+    }
+
+    .one{
+    position: absolute;
+    bottom: 10vw;
+    transform: rotate(-5deg); 
+    }
+
+    .two{
+        position: absolute;
+        right: 0;
+        bottom: 20vw;
+    }
+    
+    .tree{
+        position: absolute;
+        right: 0;
+        width: 30%;
+        bottom: -10vw;
+    }
+
+    .four{
+        position: absolute;
+        bottom: -5vw;
+        left: 10vw;
+    }
+    .five{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    
+    .item-ngambang {
+        display: none;
+    }
+    
+    .baju {
+        height: 600px;
+    }
+    
+    .produk-koleksi {
+        width: 50vw;
+        height: 40vw;
+        top: 5vw;
+    }   
+    
+    .kantong {
+        width: 30vw;
+        height: 30vw;
+        top: 20vw;
+        right: 5vw;
+    }
+    .main-bot {
+        padding: 2rem 0 0 0;
+    }
+    
+    .gallery-wrapper {
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .container-img {
+        width: 90%;
+        max-width: 500px;
+        height: 500px;
+        padding-right: 25px;
+        grid-template-columns: 1fr;
+    }
+    
+    .container-img::-webkit-scrollbar {
+        width: 70px;
+    }
+    
+    .scrollbar-container {
+        width: 80px;
+        height: 500px;
+    }
+}
+ 
+@media screen and (max-width: 480px) {
+    .kiri h1 {
+        font-size: 2rem;
+    }
+    
+    .kiri button {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    .produk-koleksi {
+        width: 60vw;
+        height: 60vw;
+        top: 25vw;
+    }
+
+    .product{
+        top: 25%;
+        left: 25%;
+    }
+    .collec{
+        top: 42%;
+        left: 52%;
+    }
+    
+    .kantong {
+        width: 20vw;
+        height: 20vw;
+        top: 40vw;
+    }
+    
+    .container-img {
+        width: 95%;
+        max-width: 100%;
+        height: 450px;
+        padding: 2rem;
+        gap: 1rem;
+    }
+    .main-bot{
+        margin-top: -15%;
+    }
+    
+    .container-img::-webkit-scrollbar {
+        width: 60px;
+    }
+    
+    .scrollbar-container {
+        width: 60px;
+        height: 450px;
+    }
+    
+    .gallery-wrapper {
+        gap: 1.5rem;
+    }
+}
