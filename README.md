@@ -16,7 +16,9 @@ Terdapat beberapa fitur didalam website ini, diantaranya:
 - halaman contact-us
 
 Dalam pencapaian tugas ini, kami menggunakan alat bantu seperti html, css, serta sedikit javascript.
+
 link repository : https://github.com/Fifian361/projek-HCI
+
 link website : https://fifian361.github.io/projek-HCI/ 
 Mata Kuliah
 Human Interactive Design (HCI)
